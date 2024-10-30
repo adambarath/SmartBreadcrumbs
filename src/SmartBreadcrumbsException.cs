@@ -1,14 +1,10 @@
 ﻿using System;
 
-namespace SmartBreadcrumbs
+namespace SmartBreadcrumbs;
+
+public class SmartBreadcrumbsException : Exception
 {
-    public class SmartBreadcrumbsException : Exception
+    public SmartBreadcrumbsException(string message) : base(message)
     {
-
-        public SmartBreadcrumbsException(string message) : base(message)
-        {
-            
-        }
-
     }
 }

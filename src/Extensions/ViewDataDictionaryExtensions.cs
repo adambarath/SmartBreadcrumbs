@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using SmartBreadcrumbs.Nodes;
 
-namespace SmartBreadcrumbs.Extensions
+namespace SmartBreadcrumbs;
+
+public static class ViewDataDictionaryExtensions
 {
-    public static class ViewDataDictionaryExtensions
-    {
-        public static void SetBreadcrumbs(this ViewDataDictionary viewData, BreadcrumbNode breadcrumb)
-        {
-            viewData["BreadcrumbNode"] = breadcrumb;
-        }
-    }
+    internal const string BreadcrumbNodeKey = "BreadcrumbNode";
+
+    public static void SetBreadcrumbs(this ViewDataDictionary viewData, BreadcrumbNode breadcrumb) => viewData[BreadcrumbNodeKey] = breadcrumb;
 }
