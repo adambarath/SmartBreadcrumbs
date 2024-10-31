@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc.Infrastructure;
-using SmartBreadcrumbs;
-using System;
+﻿using Brupper.AspNetCore.Breadcrumbs;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Reflection;
 
-namespace Microsoft.Extensions.DependencyInjection.Extensions;
+namespace Microsoft.Extensions.DependencyInjection;
 
 public static class ServiceCollectionExtensions
 {

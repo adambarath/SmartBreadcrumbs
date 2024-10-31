@@ -1,12 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using SmartBreadcrumbs.Attributes;
-using SmartBreadcrumbs.Nodes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Brupper.AspNetCore.Breadcrumbs.Attributes;
+using Brupper.AspNetCore.Breadcrumbs.Nodes;
+using Microsoft.AspNetCore.Http;
 using System.Reflection;
 
-namespace SmartBreadcrumbs;
+namespace Brupper.AspNetCore.Breadcrumbs;
 
 public class BreadcrumbManager
 {

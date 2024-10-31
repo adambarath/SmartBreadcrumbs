@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Authors>zHaytam;adambarath</Authors>
     <Company />
-    <Product>SmartBreadcrumbs</Product>
+    <Product>Brupper.AspNetCore.Breadcrumbs</Product>
     <RepositoryUrl>https://github.com/adambarath/SmartBreadcrumbs</RepositoryUrl>
     <PackageProjectUrl>https://github.com/zHaytam/SmartBreadcrumbs</PackageProjectUrl>
     <Description>A utility library for ASP.NET Core (both MVC and Razor Pages) websites to easily add and customize breadcrumbs.</Description>
@@ -15,6 +15,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <AssemblyVersion>8.0.0</AssemblyVersion>
     <FileVersion>8.0.0</FileVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>

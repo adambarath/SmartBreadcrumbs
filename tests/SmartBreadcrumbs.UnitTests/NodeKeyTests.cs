@@ -1,8 +1,8 @@
-﻿using SmartBreadcrumbs.Nodes;
+﻿using Brupper.AspNetCore.Breadcrumbs.Nodes;
 using System.Collections.Generic;
 using Xunit;
 
-namespace SmartBreadcrumbs.UnitTests
+namespace Brupper.AspNetCore.Breadcrumbs.UnitTests
 {
     public class NodeKeyTests
     {

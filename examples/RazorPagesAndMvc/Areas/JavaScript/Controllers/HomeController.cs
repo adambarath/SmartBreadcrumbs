@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RazorPagesAndMvc.Pages;
-using SmartBreadcrumbs.Attributes;
+using Brupper.AspNetCore.Breadcrumbs.Attributes;
 
 namespace RazorPagesAndMvc.Areas.JavaScript.Controllers
 {

@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SmartBreadcrumbs.csproj" />
+    <ProjectReference Include="..\..\src\Brupper.AspNetCore.Breadcrumbs.csproj" />
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 

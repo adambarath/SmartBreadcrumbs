@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Html;
+﻿using Brupper.AspNetCore.Breadcrumbs.Nodes;
+using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -6,14 +7,11 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.Extensions.Localization;
-using SmartBreadcrumbs.Nodes;
-using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Text.Encodings.Web;
-using System.Threading.Tasks;
 
-namespace SmartBreadcrumbs;
+namespace Brupper.AspNetCore.Breadcrumbs;
 
 [HtmlTargetElement("breadcrumb")]
 public class BreadcrumbTagHelper : TagHelper

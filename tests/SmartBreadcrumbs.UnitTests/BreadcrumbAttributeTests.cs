@@ -1,10 +1,10 @@
 ﻿using System;
-using SmartBreadcrumbs.Attributes;
-using SmartBreadcrumbs.UnitTests.Pages;
-using SmartBreadcrumbs.UnitTests.Pages.SubFolder1;
+using Brupper.AspNetCore.Breadcrumbs.Attributes;
+using Brupper.AspNetCore.Breadcrumbs.UnitTests.Pages;
+using Brupper.AspNetCore.Breadcrumbs.UnitTests.Pages.SubFolder1;
 using Xunit;
 
-namespace SmartBreadcrumbs.UnitTests
+namespace Brupper.AspNetCore.Breadcrumbs.UnitTests
 {
     public class BreadcrumbAttributeTests
     {

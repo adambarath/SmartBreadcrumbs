@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace SmartBreadcrumbs.UnitTests
+namespace Brupper.AspNetCore.Breadcrumbs.UnitTests
 {
     public class TestClassThree
     {

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 
-namespace SmartBreadcrumbs.Attributes;
+namespace Brupper.AspNetCore.Breadcrumbs.Attributes;
 
 [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
 public class BreadcrumbAttribute : Attribute

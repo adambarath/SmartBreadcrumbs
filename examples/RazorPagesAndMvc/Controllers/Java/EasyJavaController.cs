@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using SmartBreadcrumbs.Attributes;
-using SmartBreadcrumbs.Extensions;
-using SmartBreadcrumbs.Nodes;
+﻿using Brupper.AspNetCore.Breadcrumbs;
+using Brupper.AspNetCore.Breadcrumbs.Attributes;
+using Brupper.AspNetCore.Breadcrumbs.Nodes;
+using Microsoft.AspNetCore.Mvc;
 
 namespace RazorPagesAndMvc.Controllers.Java
 {

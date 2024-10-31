@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SmartBreadcrumbs.Attributes;
+using Brupper.AspNetCore.Breadcrumbs.Attributes;
 
-namespace SmartBreadcrumbs.UnitTests
+namespace Brupper.AspNetCore.Breadcrumbs.UnitTests
 {
     [DefaultBreadcrumb]
     public class MainController : Controller
@@ -50,7 +50,7 @@ namespace SmartBreadcrumbs.UnitTests
     }
 }
 
-namespace SmartBreadcrumbs.Controllers.SubFolder
+namespace Brupper.AspNetCore.Breadcrumbs.Controllers.SubFolder
 {
 
     public class TestTwoController : Controller

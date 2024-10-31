@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SmartBreadcrumbs;
+﻿namespace Brupper.AspNetCore.Breadcrumbs;
 
 public class BreadcrumbOptions
 {

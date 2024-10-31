@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
 
-namespace SmartBreadcrumbs.Nodes;
+namespace Brupper.AspNetCore.Breadcrumbs.Nodes;
 
 /// <summary>
 /// Class used to read routing values into a standard key for finding breadcrumb nodes.

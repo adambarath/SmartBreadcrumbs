@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
@@ -13,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using SmartBreadcrumbs.Extensions;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace RazorPagesAndMvc
@@ -41,12 +36,12 @@ namespace RazorPagesAndMvc
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
-            services.AddBreadcrumbs(GetType().Assembly, options =>
+            services.AddBreadcrumbs(options =>
             {
                 // Testing
                 options.DontLookForDefaultNode = true;
                 options.ResourceType = typeof(Resx.BreadcrumbResources);
-            });
+            }, GetType().Assembly);
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
 

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using SmartBreadcrumbs.Attributes;
+using Brupper.AspNetCore.Breadcrumbs.Attributes;
 
 namespace RazorPagesAndMvc.Pages.CSharp.Advanced
 {

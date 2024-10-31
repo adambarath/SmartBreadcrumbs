@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace SmartBreadcrumbs.UnitTests.Features
+namespace Brupper.AspNetCore.Breadcrumbs.UnitTests.Features
 {
     public class Orders : PageModel
     {

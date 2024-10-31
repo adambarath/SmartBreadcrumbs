@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace SmartBreadcrumbs.Attributes;
+﻿namespace Brupper.AspNetCore.Breadcrumbs.Attributes;
 
 public class DefaultBreadcrumbAttribute : BreadcrumbAttribute
 {
-
     #region Properties
 
     public override bool Default => true;

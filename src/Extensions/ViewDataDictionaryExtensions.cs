@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using SmartBreadcrumbs.Nodes;
+﻿using Brupper.AspNetCore.Breadcrumbs.Nodes;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
-namespace SmartBreadcrumbs;
+namespace Brupper.AspNetCore.Breadcrumbs;
 
 public static class ViewDataDictionaryExtensions
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace SmartBreadcrumbs.UnitTests.Features.FeatureOne
+namespace Brupper.AspNetCore.Breadcrumbs.UnitTests.Features.FeatureOne
 {
     public class SubFeatureModel : PageModel
     {

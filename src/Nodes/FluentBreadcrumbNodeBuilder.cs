@@ -1,4 +1,4 @@
-﻿namespace SmartBreadcrumbs.Nodes;
+﻿namespace Brupper.AspNetCore.Breadcrumbs.Nodes;
 
 public class FluentBreadcrumbNodeBuilder
 {

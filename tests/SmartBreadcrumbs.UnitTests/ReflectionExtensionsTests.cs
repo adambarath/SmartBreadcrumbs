@@ -1,16 +1,15 @@
-﻿using System;
+﻿using Brupper.AspNetCore.Breadcrumbs.Controllers.SubFolder;
+using Brupper.AspNetCore.Breadcrumbs.UnitTests.Features;
+using Brupper.AspNetCore.Breadcrumbs.UnitTests.Features.FeatureOne;
+using Brupper.AspNetCore.Breadcrumbs.UnitTests.Pages;
+using Brupper.AspNetCore.Breadcrumbs.UnitTests.Pages.SubFolder1;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Reflection;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using SmartBreadcrumbs.Controllers.SubFolder;
-using SmartBreadcrumbs.Extensions;
-using SmartBreadcrumbs.UnitTests.Features;
-using SmartBreadcrumbs.UnitTests.Features.FeatureOne;
-using SmartBreadcrumbs.UnitTests.Pages;
-using SmartBreadcrumbs.UnitTests.Pages.SubFolder1;
 using Xunit;
 
-namespace SmartBreadcrumbs.UnitTests
+namespace Brupper.AspNetCore.Breadcrumbs.UnitTests
 {
     public class ReflectionExtensionsTests
     {

@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using SmartBreadcrumbs.Attributes;
+﻿using Brupper.AspNetCore.Breadcrumbs.Attributes;
+using Microsoft.AspNetCore.Mvc;
 
-namespace SmartBreadcrumbs.Nodes;
+namespace Brupper.AspNetCore.Breadcrumbs.Nodes;
 
 public class RazorPageBreadcrumbNode : BreadcrumbNode
 {
