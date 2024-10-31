@@ -2,21 +2,23 @@
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using System.Reflection;
 using System.Text;
 using System.Text.Encodings.Web;
+
 
 namespace Brupper.AspNetCore.Breadcrumbs;
 
 [HtmlTargetElement("breadcrumb")]
 public class BreadcrumbTagHelper : TagHelper
 {
-
     #region Fields
 
     private readonly BreadcrumbManager _breadcrumbManager;
@@ -34,19 +36,26 @@ public class BreadcrumbTagHelper : TagHelper
 
     #endregion
 
-    public BreadcrumbTagHelper(BreadcrumbManager breadcrumbManager, IUrlHelperFactory urlHelperFactory,
-        IActionContextAccessor actionContextAccessor, HtmlEncoder htmlEncoder)
+    public BreadcrumbTagHelper(
+        BreadcrumbManager breadcrumbManager,
+        IUrlHelperFactory urlHelperFactory,
+        IActionContextAccessor actionContextAccessor,
+        HtmlEncoder htmlEncoder
+    )
     {
+
         _breadcrumbManager = breadcrumbManager;
         _htmlEncoder = htmlEncoder;
         _urlHelper = urlHelperFactory.GetUrlHelper(actionContextAccessor.ActionContext);
 
-        IStringLocalizerFactory factory = (IStringLocalizerFactory)actionContextAccessor.ActionContext.HttpContext.RequestServices.GetService(typeof(IStringLocalizerFactory));
+        var factory = actionContextAccessor.ActionContext.HttpContext.RequestServices.GetService<IStringLocalizerFactory>();
         if (factory != null && BreadcrumbManager.Options.ResourceType != null)
         {
             var type = BreadcrumbManager.Options.ResourceType;
             var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
-            _localizer = factory.Create(BreadcrumbManager.Options.ResourceType.Name, assemblyName.Name);
+            _localizer = factory.Create(BreadcrumbManager.Options.ResourceType);
+            // https://github.com/dotnet/aspnetcore/blob/main/src/Localization/Localization/src/ResourceManagerStringLocalizerFactory.cs
+            // https://github.com/WormieCorp/Localization.AspNetCore.TagHelpers/blob/develop/src/Localization.AspNetCore.TagHelpers/Internals/HtmlLocalizerFactoryExtensions.cs
         }
     }
 
@@ -56,8 +65,7 @@ public class BreadcrumbTagHelper : TagHelper
     {
         var child = await output.GetChildContentAsync();
 
-        var nodeKey = new NodeKey(ViewContext.ActionDescriptor.RouteValues, ViewContext.HttpContext.Request.Method);
-        var node = ViewContext.ViewData["BreadcrumbNode"] as BreadcrumbNode ?? _breadcrumbManager.GetNode(nodeKey.Value);
+        var node = ViewContext.GetBreadcrumbs(_breadcrumbManager);
 
         output.TagName = BreadcrumbManager.Options.TagName;
         if (!string.IsNullOrWhiteSpace(BreadcrumbManager.Options.AriaLabel))
