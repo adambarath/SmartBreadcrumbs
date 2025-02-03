@@ -5,6 +5,11 @@ public class BreadcrumbOptions
     #region Properties
 
     /// <summary>
+    /// Do not render if there is only 1 element, which is 'root'
+    /// </summary>
+    public bool DoNotRenderOneElement { get; set; }
+
+    /// <summary>
     /// The parent element tag name.
     /// </summary>
     public string TagName { get; set; }

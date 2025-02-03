@@ -66,6 +66,10 @@ public class BreadcrumbTagHelper : TagHelper
         var child = await output.GetChildContentAsync();
 
         var node = ViewContext.GetBreadcrumbs(_breadcrumbManager);
+        if (node.Parent == null && BreadcrumbManager.Options.DoNotRenderOneElement)
+        {
+            return;
+        }
 
         output.TagName = BreadcrumbManager.Options.TagName;
         if (!string.IsNullOrWhiteSpace(BreadcrumbManager.Options.AriaLabel))
@@ -136,6 +140,11 @@ public class BreadcrumbTagHelper : TagHelper
 
     private string ExtractTitle(string title, bool encode = true)
     {
+        if (string.IsNullOrWhiteSpace(title))
+        {
+            return string.Empty;
+        }
+
         if (!title.StartsWith("ViewData."))
         {
             if (_localizer != null)
